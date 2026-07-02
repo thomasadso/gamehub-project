@@ -4,13 +4,13 @@ from pymongo import MongoClient
 
 app = Flask(__name__)
 
-# Reemplaza con tu cadena de conexión real de MongoDB Atlas [cite: 37]
+# Reemplaza con tu cadena de conexión real de MongoDB Atlas
 MONGO_URI = os.environ.get("MONGO_URI")
 client = MongoClient(MONGO_URI)
 db = client['gamehub_analytics']
 collection = db['estadisticas_juegos']
 
-@app.route('/api/videojuegos', methods=['POST']) [cite: 41]
+@app.route('/api/videojuegos', methods=['POST'])
 def registrar_analitica():
     """Recibe la calificación de PHP y actualiza o crea las estadísticas en MongoDB[cite: 18, 48]."""
     data = request.get_json()
@@ -50,14 +50,14 @@ def registrar_analitica():
         
     return jsonify({"mensaje": "Módulo de analítica actualizado correctamente"}), 201
 
-@app.route('/api/estadisticas', methods=['GET']) [cite: 42]
+@app.route('/api/estadisticas', methods=['GET'])
 def consultar_estadisticas():
     """Regresa el listado completo de estadísticas acumuladas[cite: 42]."""
     documentos = collection.find({}, {"_id": 0}) # Omitimos el campo _id interno de Mongo
     resultado = list(documentos)
     return jsonify(resultado), 200
 
-@app.route('/api/mejores-videojuegos', methods=['GET']) [cite: 43]
+@app.route('/api/mejores-videojuegos', methods=['GET'])
 def mejores_videojuegos():
     """Regresa los videojuegos ordenados de mayor a menor calificación promedio[cite: 43]."""
     # Ordenamos por 'promedio' de manera descendente (-1)

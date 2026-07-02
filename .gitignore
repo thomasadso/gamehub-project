@@ -1,0 +1,13 @@
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Python (Basura que no debe subirse)
+__pycache__/
+*.pyc
+venv/
+.env
+
+# Entornos de desarrollo
+.vscode/
+.idea/

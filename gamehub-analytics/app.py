@@ -1,10 +1,11 @@
+import os
 from flask import Flask, request, jsonify
 from pymongo import MongoClient
 
 app = Flask(__name__)
 
 # Reemplaza con tu cadena de conexión real de MongoDB Atlas [cite: 37]
-MONGO_URI = "mongodb+srv://tu_usuario:tu_clave@cluster0.mongodb.net/gamehub_analytics?retryWrites=true&w=majority"
+MONGO_URI = os.environ.get("MONGO_URI")
 client = MongoClient(MONGO_URI)
 db = client['gamehub_analytics']
 collection = db['estadisticas_juegos']

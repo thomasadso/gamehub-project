@@ -1,9 +1,9 @@
 <?php
 // Datos de conexión (cuando despliegues en Render, reemplaza estos valores con tus credenciales de la BD)
-$host = 'localhost';
-$dbname = 'gamehub_db';
-$username = 'postgres';
-$password = 'tu_contraseña';
+$host = 'dpg-d939pv67r5hc73949tn0-a';
+$dbname = 'gamehub_fo67';
+$username = 'gamehub_fo67_user';
+$password = 'nEvPVpAVt7Kb6KEqL7BP8cEFn4dWK61S';
 
 try {
     // Creamos la conexión usando la clase PDO

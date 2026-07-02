@@ -17,10 +17,10 @@ try:
 
     # 2. Prueba: Dejar reseña 
     driver.get("http://localhost/gamehub-web/registrar_resena.php")
-    driver.find_element(By.NAME, "usuario").send_keys("TomasCalderon")
+    driver.find_element(By.NAME, "usuario").send_keys("ThomasCalderon")
     driver.find_element(By.NAME, "calificacion").send_keys("5")
     driver.find_element(By.NAME, "comentario").send_keys("Excelente simulador, muy realista.")
-    # Nota: El select de videojuego requiere que el usuario elija la opción idónea en vivo
+    # Nota: El select de videojuego requiere que el usuario elija la opción idonea en vivo
     time.sleep(2)
     
 finally:

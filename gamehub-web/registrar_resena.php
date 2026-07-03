@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // 2. Enviar datos a la API de Python Flask usando cURL [cite: 47]
             // Cambia esta URL por la URL pública de tu Render cuando la despliegues 
-            $url_api_python = "http://localhost:5000/api/videojuegos"; 
+            $url_api_python = "https://gamehub-web-portal.onrender.com/"; 
             
             $datos_para_python = [
                 "videojuego_id" => $videojuego_id,

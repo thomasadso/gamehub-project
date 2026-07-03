@@ -5,7 +5,8 @@ from pymongo import MongoClient
 app = Flask(__name__)
 
 # Reemplaza con tu cadena de conexión real de MongoDB Atlas
-MONGO_URI = mongodb+srv://tccpcsf_db_user:resenias@clusterpractica1mongo.o08m1ks.mongodb.net/?appName=CLUSTERPRACTICA1MONGO
+# LÍNEA 8: ¡Fíjate bien en las comillas!
+MONGO_URI = "mongodb+srv://tccpcsf_db_user:resenias@clusterpracticalmongo.o08m1ks.mongodb.net/?retryWrites=true&w=majority"
 client = MongoClient(MONGO_URI)
 db = client['gamehub_analytics']
 collection = db['estadisticas_juegos']

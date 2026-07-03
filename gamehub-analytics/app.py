@@ -4,7 +4,7 @@ from pymongo import MongoClient
 
 app = Flask(__name__)
 
-MONGO_URI = "mongodb+srv://tccpcsf_db_user:resenias@clusterpracticalmongo.o08m1ks.mongodb.net/?retryWrites=true&w=majority"
+MONGO_URI = "mongodb+srv://tccpcsf_db_user:resenias@clusterpracticalmongo.o08m1ks.mongodb.net/?ssl=true&tlsAllowInvalidCertificates=true"
 client = MongoClient(MONGO_URI)
 db = client['gamehub_analytics']
 collection = db['estadisticas_juegos']
